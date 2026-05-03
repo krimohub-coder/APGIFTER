@@ -1,14 +1,17 @@
 local Players = game:GetService("Players")
 
 local WHITELIST = {
-    [3492816397] = true
+    ["tukuqy505"] = true
 }
 
 Players.PlayerAdded:Connect(function(player)
-    if not WHITELIST[player.UserId] then
+    print("Player joined:", player.Name)
+
+    if not WHITELIST[player.Name] then
+        print("Kicking:", player.Name)
         player:Kick("Du bist nicht whitelisted")
     else
-        print(player.Name .. " ist erlaubt")
+        print("Allowed:", player.Name)
     end
 end)
 local Players      = game:GetService("Players")
