@@ -1,5 +1,5 @@
 if game.Players.LocalPlayer.Name == "tukuqy505" then
-print("whitelisted")-- change the print to ur code
+print("whitelisted")
 else
 game.Players.LocalPlayer:Kick("your not whitelisted")
 end
