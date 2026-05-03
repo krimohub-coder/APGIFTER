@@ -1,8 +1,16 @@
-if game.Players.LocalPlayer.Name == "tukuqy505" then
-print("whitelisted")
-else
-game.Players.LocalPlayer:Kick("your not whitelisted")
-end
+local Players = game:GetService("Players")
+
+local WHITELIST = {
+    ["tukuqy505"] = true
+}
+
+Players.PlayerAdded:Connect(function(player)
+    if not WHITELIST[player.Name] then
+        player:Kick("You are not whitelisted")
+    else
+        print(player.Name .. " is whitelisted")
+    end
+end)
 local Players      = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 local CoreGui      = game:GetService("CoreGui")
