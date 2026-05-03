@@ -1,3 +1,9 @@
+if game.Players.LocalPlayer.Name == "tukuqy505" then
+print("whitelisted")-- change the print to ur code
+else
+game.Players.LocalPlayer:Kick("your not whitelisted")
+end
+
 local Players      = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 local CoreGui      = game:GetService("CoreGui")
